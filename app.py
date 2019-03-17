@@ -5,7 +5,8 @@ app =  Flask(__name__)
 @app.route('/')
 def home():
     try:
-        return render_template("index.html")
+        serverID = '1234567'
+        return render_template("index.html", value=serverID)
     except Exception as e:
         return str(e)
 
